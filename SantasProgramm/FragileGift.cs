@@ -27,6 +27,7 @@ namespace SantasProgramm
             return IsPadded;
         }
 
+        // Konstruktor mit VErkettung damit DRY eingehalten wird
         public FragileGift(string name, string description, int weight, string protectionMaterial) : base(name, description, weight) 
         {
             ProtectionMaterial = protectionMaterial;

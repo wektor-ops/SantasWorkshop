@@ -36,6 +36,7 @@ namespace SantasProgramm
         {
             Task = task;
         }
+        // 3 Überladungen für MakeGift damit die einzelnen Geschenke der verschiedenen Typen erstellt werden können ohne immer einen anderen Namen zu schreiben. 
         public void MakeGift(string name, string description, int weight, bool hasBow, string wrappingPaperColor)
         {
             Console.WriteLine($"{Name} erstellt ein {description}.");

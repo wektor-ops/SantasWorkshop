@@ -19,6 +19,7 @@ namespace SantasProgramm
         {
             ReindeerCount = reindeerCount;
         }
+        // Deliver Methode damit Interface eingehalten wird
         public void Deliver(string destination)
         {
             Console.WriteLine($"Schlitten nach {destination} gestartet.");

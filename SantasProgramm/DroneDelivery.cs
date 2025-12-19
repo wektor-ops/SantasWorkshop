@@ -20,6 +20,7 @@ namespace SantasProgramm
             RotorCount = rotorCount;
         }
 
+        // Deliver Methode damit Interface eingehalten wird
         public void Deliver(string destination)
         {
             Console.WriteLine($"Drone nach {destination} gestartet.");

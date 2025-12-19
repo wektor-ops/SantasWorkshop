@@ -27,6 +27,7 @@ namespace SantasProgramm
             return !NeedsBatteries || AreBatteriesIncluded;
         }
 
+        // Konstruktor mit VErkettung damit DRY eingehalten wird
         public ElectronicGift(string name, string description, int weight, bool needsBatteries) : base(name, description, weight) 
         {
             NeedsBatteries = needsBatteries;

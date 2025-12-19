@@ -14,6 +14,7 @@ namespace SantasProgramm
            set { _deliveryStrategy = value; }
         }
 
+        // Konstruktor mit Dependency Injection für Lieferungsart
         public Workshop(IDeliveryStrategy deliveryStrategy)
         {
             DeliveryStrategy = deliveryStrategy;
@@ -27,6 +28,7 @@ namespace SantasProgramm
 
             foreach (BaseGift gift in AllGifts)
             {
+                if(gift.IsReady())
                     Console.WriteLine($"Geschenk {gift.Name}: wird Versendet");
             }
             _deliveryStrategy.Deliver(destination);

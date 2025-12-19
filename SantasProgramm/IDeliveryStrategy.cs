@@ -8,6 +8,7 @@ namespace SantasProgramm
 {
     public interface IDeliveryStrategy
     {
+        // Deliver Methode damit jeder Lieferungsart eine Versand möglichkeit hat
         void Deliver(string destination);
     }
 }

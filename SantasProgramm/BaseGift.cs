@@ -28,6 +28,7 @@ namespace SantasProgramm
             get { return _weight; }
             set { _weight = value; }
         }
+        // Methode damit jedes Geschenk ein Check hat ob es bereit ist
         public virtual bool IsReady()
         {
             if(Name != "")
@@ -35,6 +36,7 @@ namespace SantasProgramm
             return false;
         }
 
+        // Konstruktor für die Verkettung von den Erbernden Klassen Konstruktoren damit DRY eingehaten wird
         public BaseGift(string name, string description, int weight)
         {
             Name = name;
