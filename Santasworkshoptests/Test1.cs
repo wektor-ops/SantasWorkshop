@@ -1,4 +1,4 @@
-﻿using SantasProgramm;
+using SantasProgramm;
 
 namespace Santasworkshoptests
 {
@@ -6,21 +6,32 @@ namespace Santasworkshoptests
     public sealed class Test1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Checkifgiftwasadded()
         {
             //Arange
-            StandardGift testgift = new StandardGift("testname", "testdescription",1 , "blue", false );
+            StandardGift testgift = new StandardGift("testname", "testdescription", 1, false);
             SleighDelivery testsleighDelivery = new SleighDelivery();
-             List<BaseGift> AllGifts = new List<BaseGift>();
             Workshop testworkshop = new Workshop(testsleighDelivery);
-            int expected = AllGifts.Count + 1;
+            int expected = Workshop.AllGifts.Count + 1;
 
 
             //Act
-            testworkshop.AllGifts.Add(testgift);
+            Workshop.AllGifts.Add(testgift);
 
             //Assert
-            Assert.AreEqual(AllGifts.Count, expected);
+            Assert.AreEqual(Workshop.AllGifts.Count, expected);
+        }
+        [TestMethod]
+        public void hastheelfreceivedanewtask()
+        {
+            //Arange
+            Elf jegor = new Elf("egor", "");
+            string expected = jegor.Task;
+
+            //Act
+            jegor.GiveNewTask("Teddy Geschenk Herstellen");
+            //Assert
+            Assert.AreNotEqual(expected, jegor.Task, "Nicht funktioniert");
         }
     }
 }
