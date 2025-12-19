@@ -21,11 +21,17 @@ namespace SantasProgramm
             get { return _hasBow; }
             set { _hasBow = value; }
         }
+        public override bool IsReady()
+        {
+            if (WrappingPaperColor != "")
+                return true;
+            return false;
+        }
 
-        public StandardGift(string name, string description, int weight, string wrappingPaperColor, bool hasBow = false) : base(name, description, weight)
+        public StandardGift(string name, string description, int weight, bool hasBow = false) : base(name, description, weight)
         {
             
-            WrappingPaperColor = wrappingPaperColor;
+            WrappingPaperColor = "";
             HasBow = hasBow;
         }
     }

@@ -22,15 +22,15 @@ namespace SantasProgramm
             set { _areBatteriesIncluded = value; }
         }
 
-        public bool IsReady()
+        public override bool IsReady()
         {
             return !NeedsBatteries || AreBatteriesIncluded;
         }
 
-        public ElectronicGift(string name, string description, int weight, bool needsBatteries, bool areBatteriesIncluded = false) : base(name, description, weight) 
+        public ElectronicGift(string name, string description, int weight, bool needsBatteries) : base(name, description, weight) 
         {
             NeedsBatteries = needsBatteries;
-            AreBatteriesIncluded = areBatteriesIncluded;
+            AreBatteriesIncluded = false;
         }
     }
 }

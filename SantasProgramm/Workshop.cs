@@ -19,7 +19,8 @@ namespace SantasProgramm
             DeliveryStrategy = deliveryStrategy;
         }
 
-        public List<BaseGift> AllGifts = new List<BaseGift>();
+        public static List<BaseGift> AllGifts = new List<BaseGift>();
+        public List<Elf> AllElfs = new List<Elf>();
 
         public void PrepareAndShip(string destination)
         {

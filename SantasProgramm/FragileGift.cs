@@ -22,15 +22,15 @@ namespace SantasProgramm
             set { _isPadded = value; }
         }
 
-        public bool IsReady()
+        public override bool IsReady()
         {
             return IsPadded;
         }
 
-        public FragileGift(string name, string description, int weight, string protectionMaterial, bool isPadded = false) : base(name, description, weight) 
+        public FragileGift(string name, string description, int weight, string protectionMaterial) : base(name, description, weight) 
         {
             ProtectionMaterial = protectionMaterial;
-            IsPadded = isPadded;
+            IsPadded = false;
         }
 
     }
