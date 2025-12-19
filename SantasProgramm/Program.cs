@@ -3,15 +3,11 @@
 IDeliveryStrategy deliveryStrategy = new SleighDelivery();
 Workshop santasWorkshop = new Workshop(deliveryStrategy);
 
-santasWorkshop.AllGifts.Add(new ElectronicGift(
-            "Gaming PC", "Computer für Videospiele", 12, true, true));
+Elf Khalil = new Elf("Khalil", "");
 
-santasWorkshop.AllGifts.Add(new FragileGift(
-            "Vase", "Antike Glasvase", 3, "Luftpolsterfolie", true));
-
-santasWorkshop.AllGifts.Add(new StandardGift(
-            "Teddybär", "Kuscheliges Stofftier", 1, "Blaues Papier", true));
-
+Khalil.GiveNewTask("Teddy Geschenk Herstellen");
+Khalil.Work();
+Khalil.MakeGift("Teddybär", "Kuscheliges Stofftier", 1,true,  "Blaues Papier");
 santasWorkshop.PrepareAndShip("Sursee");
 
 Console.ReadKey();
